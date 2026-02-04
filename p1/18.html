@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>O+O Pizza Menu</title>
+
+<style>
+body {
+  font-family: Georgia, "Times New Roman", serif;
+  background: #eee;
+  color: #963838;
+  padding: 0px;
+
+  background-image:
+    linear-gradient(
+      rgba(255, 255, 255, 0.55),
+      rgba(238, 238, 238, 0.55)
+    ),
+    url("app.jpg"); 
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+.menu {
+  max-width: 600px;
+  margin: auto;
+  background: #d2e4dd;
+  padding: 40px;
+  border-radius: 8px;
+}
+
+/* Header */
+h1 {
+  text-align: center;
+  letter-spacing: 3px;
+  margin-bottom: 30px;
+}
+
+/* Dropdown sections */
+details {
+  margin-bottom: 20px;
+  border-bottom: 1px solid #bfa6a6;
+  padding-bottom: 10px;
+  margin-top: 20px;
+}
+
+summary {
+  cursor: pointer;
+  font-weight: bold;
+  letter-spacing: 2px;
+  color: #f8622b;
+  list-style: none;
+}
+
+summary::-webkit-details-marker {
+  display: none;
+}
+
+summary::after {
+  content: " +";
+  float: right;
+}
+
+details[open] summary::after {
+  content: " −";
+}
+
+
+.item {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px 0;
+  font-size: 0.9rem;
+}
+
+.desc {
+  font-size: 0.8rem;
+  color: #555;
+  margin-bottom: 10px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="menu">
+  <h1>O+O PIZZA</h1>
+
+  <img src="pizza.png" width="600" height="420">
+  <details>
+    <summary>SMALL PLATES</summary>
+
+    <div class="item"><span>Whipped Goat Cheese</span><span>16</span></div>
+    <div class="desc">Pomegranate honey, pine nut, chili</div>
+
+    <div class="item"><span>Prosciutto di Parma</span><span>22</span></div>
+    <div class="desc">Burrata, aged balsamic</div>
+
+    <div class="item"><span>Pancetta Meatballs</span><span>15</span></div>
+    <div class="desc">Parmesan polenta</div>
+    <div class="item"><span>Hand-Made Toasted Ravioli</span><span>15</span></div>
+      <div class="desc">Fontina, beef, pancetta tesa, tomato ragu</div>
+
+      <div class="item"><span>Arancini</span><span>15</span></div>
+      <div class="desc">Butternut squash, brown butter-sage aioli, black pepper maple</div>
+
+      <div class="item"><span>Grilled Octopus Corzetti</span><span>18</span></div>
+      <div class="desc">Bone marrow, red wine, thyme, leeks, tomato, fennel pollen</div>
+
+      <div class="item"><span>Gnocchi</span><span>16</span></div>
+      <div class="desc">Roasted butternut squash, smoked pancetta, arugula, apple cider rosemary cream</div>
+  </details>
+
+ 
+  <details>
+    <summary>SALAD</summary>
+
+    <div class="item"><span>Caesar</span><span>15</span></div>
+    <div class="desc">Romaine, warm croutons, parmesan</div>
+
+    <div class="item"><span>Chopped</span><span>16</span></div>
+    <div class="desc">Iceberg, pepperoni, mozzarella, crispy lentils</div>
+  </details>
+
+  
+  <details>
+    <summary>HAND-MADE PASTA</summary>
+
+    <div class="item"><span>Linguini</span><span>26</span></div>
+    <div class="desc">Shrimp, scallops, saffron broth</div>
+
+    <div class="item"><span>Creste di Gallo</span><span>32</span></div>
+    <div class="desc">Lobster, vodka cream</div>
+  
+    <div class="item"><span>The Ravioli</span><span>28</span></div>
+    <div class="desc">Nduja, burrata, ricotta, tomato butter, parmesan pecorino cream pour over</div>
+  
+    <div class="item"><span>Casarecce Cacio e Pepe</span><span>22</span></div>
+    <div class="desc">Pecorino, black pepper</div>
+  
+    <div class="item"><span>Tagliatelle</span><span>26</span></div>
+    <div class="desc">Pork cheek bolognese, ricotta salata</div>
+  
+    <div class="item"><span>Agnolotti</span><span>26</span></div>
+    <div class="desc">Burrata, ricotta, fennel, snap peas, sun-dried tomatoes, pink peppercorn</div>
+  
+    <div class="item"><span>Fettuccine</span><span>28</span></div>
+    <div class="desc">Braised short rib, buffalo butter, cream, parmesan, black pepper</div>
+  
+    <div class="note">Add shaved black truffles +16</div>
+  </details>
+
+
+  <details>
+    <summary>PIZZA</summary>
+
+    <div class="note">Crisp thin crust · Natural flour · Plum tomatoes<br>Add shaved black truffles +16</div>
+
+    <div class="item"><div class="item-line"><span>Sausage + Roasted Garlic</span><span>23</span></div>
+    <div class="desc">Olive oil, mozzarella, pecorino, chives</div></div>
+
+    <div class="item"><div class="item-line"><span>The “OG” Pepperoni</span><span>23</span></div>
+    <div class="desc">Tomato sauce, mozzarella, pecorino, Calabrian chili, hot honey</div></div>
+
+    <div class="item"><div class="item-line"><span>Margherita</span><span>20</span></div>
+    <div class="desc">Tomato sauce, mozzarella, basil</div></div>
+
+    <div class="item"><div class="item-line"><span>Mark’s Meatball Pie</span><span>23</span></div>
+    <div class="desc">Tomato-vodka cream sauce, meatball, chives</div></div>
+
+    <div class="item"><div class="item-line"><span>Mushroom Duxelle</span><span>22</span></div>
+    <div class="desc">Caramelized onion, porcini, peppers, goat cheese, fig balsamic</div></div>
+  </details>
+
+
+  <details>
+    <summary>MAINS</summary>
+
+    <div class="item"><span>Strip Steak</span><span>48</span></div>
+    <div class="desc">Caesar potatoes, herb butter</div>
+  
+    <div class="item"><span>Chicken Parm</span><span>27</span></div>
+    <div class="desc">Tomato vodka cream sauce, broccolini</div>
+  
+    <div class="item"><span>Strip Steak (14 oz)</span><span>48</span></div>
+    <div class="desc">Caesar potatoes, herb butter</div>
+  
+    <div class="item"><span>White Lasagna</span><span>24</span></div>
+    <div class="desc">Zucchini, squash, garlic greens, leeks, ricotta, mozzarella, pistachio pesto</div>
+  
+    <div class="item"><span>The Chicken Parm</span><span>27</span></div>
+    <div class="desc">Breaded & seared, tomato vodka cream sauce, mozzarella, broccolini, basil, rosemary</div>
+  
+    <div class="item"><span>The Eggplant Parm</span><span>25</span></div>
+    <div class="desc">Fried, mozzarella, oregano</div>
+  
+    <div class="item"><span>Grilled Salmon</span><span>28</span></div>
+    <div class="desc">Cous cous, winter citrus, arugula, peppers, olive oil vinaigrette, sesame tahini labneh</div>
+  
+    <div class="item"><span>Pork Rib Chop (14 oz)</span><span>34</span></div>
+    <div class="desc">Risotto, caper & mushrooms, basil pesto, asparagus, prosciutto butter</div>
+</div>
+  </details>
+
+</div>
+
+</body>
+</html>
