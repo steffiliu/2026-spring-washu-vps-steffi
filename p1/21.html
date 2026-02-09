@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>O+O Pizza</title>
+<link rel="icon" type="pizza.png" href="favicon.png">
+<style>
+
+body {
+  margin: 0;
+  font-family: 'Playfair Display', serif;
+  background: #f0fff2;
+  color: #3b2f2f;
+}
+
+header {
+  text-align: center;
+  padding: 160px 20px;
+  position: relative;
+  background-image: url("pizza.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+
+header::before {
+  content: "";
+  position: absolute;
+  inset: 0; 
+  background: rgba(200, 216, 214, 0.35);
+  z-index: 0;
+}
+
+
+header h1,
+header p {
+  position: relative;
+  z-index: 1;
+  color: rgb(229, 76, 0);
+}
+
+header h1 {
+  margin: 0;
+  font-size: 3rem;
+}
+
+header p {
+  margin-top: 10px;
+  font-style: italic;
+  font-size: 1.2rem;
+}
+image{
+    width: 100%;
+  border-radius: 12px;
+  display: block;
+  object-fit: cover;
+}
+
+.tabs {
+  display: flex;
+  justify-content: center;
+  background: #fcedb0;
+}
+
+.tabs label {
+  padding: 15px 25px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+
+.tabs label:hover {
+  background: #e95b197c;
+}
+
+
+input[type="radio"] {
+  display: none;
+}
+
+
+.content {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 30px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  display: none;
+}
+
+
+#home:checked ~ .sections #home-content,
+#menu:checked ~ .sections #menu-content,
+#location:checked ~ .sections #location-content,
+#about:checked ~ .sections #about-content {
+  display: block;
+}
+
+.menu-columns {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+}
+
+.section {
+  margin-bottom: 40px;
+  padding: 15px;
+  border-radius: 6px;
+  transition: background 0.3s;
+}
+
+.section:nth-child(odd) {
+  background: rgba(252, 255, 218, 0.84);
+}
+
+.section-nobox {
+  background: none;
+  padding: 0;
+}
+
+.section-title {
+  font-size: 0.9rem;
+  letter-spacing: 3px;
+  font-weight: bold;
+  color: #f8622b;
+  border-bottom: 2px solid #f8622b;
+  padding-bottom: 6px;
+  margin-bottom: 18px;
+}
+
+.item {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  font-weight: bold;
+  transition: transform 0.2s, background 0.2s;
+  padding: 4px 6px;
+  border-radius: 4px;
+}
+
+.item:hover {
+  background: rgba(255, 117, 71, 0.25);
+}
+
+.desc {
+  font-size: 0.8rem;
+  opacity: 0.7;
+  margin-bottom: 12px;
+  padding-left: 6px;
+  line-height: 1.4;
+}
+
+.item:hover span:last-child {
+  color: #f8622b;
+}
+
+#home-content {
+  text-align: center;
+  font-size: 1.1rem;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <h1>O+O Pizza</h1>
+  <p>Est 2022 ~ STL</p>
+</header>
+
+
+<input type="radio" name="tab" id="home" checked>
+<input type="radio" name="tab" id="menu">
+<input type="radio" name="tab" id="location">
+<input type="radio" name="tab" id="about">
+
+
+<div class="tabs">
+  <label for="home">Home</label>
+  <label for="menu">Menu</label>
+  <label for="location">Location</label>
+  <label for="about">Contact Us</label>
+</div>
+
+
+<div class="sections">
+
+
+  <div class="content" id="home-content">
+    <h2>Welcome to O+O Pizza</h2>
+    <p>We are a New American restaurant inspired by the neighborhood trattorias throughout Italy. Located in the heart of Old Webster, O+O Pizza is a cozy yet sophisticated neighborhood destination, bringing together great food and genuine hospitality in a lively, welcoming space.</p>
+    <img src="din.png" class="image">
+    <h2>Our Menu</h2>
+    <p>We aim to celebrate great times with family and friends, at the table through thin-crust pizzas, pastas and more, along with a thoughtful selection of our favorite wine, beer & cocktails.</p>
+    <label for="menu" style="
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background: #f8622b;
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.3s;
+  ">View Menu</label>
+</div>
+
+  <!-- MENU -->
+  <div class="content" id="menu-content">
+    <div class="menu-columns">
+      <div>
+        <div class="section">
+            <div class="section-title">Small Plates</div>
+            <div class="item"><span>Whipped Goat Cheese</span><span>16</span></div>
+            <div class="desc">Pomegranate honey, pine nut, chili, grilled bianco bread</div>
+    
+            <div class="item"><span>Prosciutto di Parma</span><span>22</span></div>
+            <div class="desc">Burrata, aged balsamic, olive oil</div>
+    
+            <div class="item"><span>Pancetta Meatballs</span><span>15</span></div>
+            <div class="desc">Parmesan polenta, tomato ragu</div>
+            
+            <div class="item"><span>Hand-Made Toasted Ravioli</span><span>15</span></div>
+            <div class="desc">Fontina, beef, pancetta tesa, tomato ragu</div>
+    
+            <div class="item"><span>Arancini</span><span>15</span></div>
+            <div class="desc">Butternut squash, brown butter-sage aioli, black pepper maple</div>
+    
+            <div class="item"><span>Grilled Octopus Corzetti</span><span>18</span></div>
+            <div class="desc">Bone marrow, red wine, thyme, leeks, tomato, fennel pollen</div>
+    
+            <div class="item"><span>Gnocchi</span><span>16</span></div>
+            <div class="desc">Roasted butternut squash, smoked pancetta, arugula, apple cider rosemary cream</div>
+        </div>
+    
+          <div class="section">
+            <div class="section-title">Salad</div>
+            <div class="item"><span>Caesar</span><span>15</span></div>
+            <div class="desc">Romaine, warm croutons, parmesan</div>
+    
+            <div class="item"><span>Chopped</span><span>16</span></div>
+            <div class="desc">Iceberg, pepperoni, mozzarella, crispy lentils</div>
+          </div>
+    
+        </div>
+    
+       
+        <div>
+    
+            <div class="section.nobox">
+                <div class="section-title">Hand-Made Pasta</div>
+              
+                <div class="item"><span>Linguini</span><span>26</span></div>
+                <div class="desc">Shrimp, scallops, saffron tomato broth</div>
+              
+                <div class="item"><span>Creste di Gallo</span><span>32</span></div>
+                <div class="desc">Lobster, Calabrian chili, vodka cream sauce</div>
+              
+                <div class="item"><span>The Ravioli</span><span>28</span></div>
+                <div class="desc">Nduja, burrata, ricotta, tomato butter, parmesan pecorino cream pour over</div>
+              
+                <div class="item"><span>Casarecce Cacio e Pepe</span><span>22</span></div>
+                <div class="desc">Pecorino, black pepper</div>
+              
+                <div class="item"><span>Tagliatelle</span><span>26</span></div>
+                <div class="desc">Pork cheek bolognese, ricotta salata</div>
+              
+                <div class="item"><span>Agnolotti</span><span>26</span></div>
+                <div class="desc">Burrata, ricotta, fennel, snap peas, sun-dried tomatoes, pink peppercorn</div>
+              
+                <div class="item"><span>Fettuccine</span><span>28</span></div>
+                <div class="desc">Braised short rib, buffalo butter, cream, parmesan, black pepper</div>
+              
+                <div class="note">Add shaved black truffles +16</div>
+              </div>
+              
+        </div>
+    
+        
+            <div class="section">
+                <div class="section-title">Pizza</div>
+              
+                <div class="item"><span>Sausage + Roasted Garlic</span><span>23</span></div>
+                <div class="desc">Olive oil, mozzarella, pecorino, chives</div>
+              
+                <div class="item"><span>The “OG” Pepperoni</span><span>23</span></div>
+                <div class="desc">Tomato sauce, mozzarella, pecorino, Calabrian chili, hot honey</div>
+              
+                <div class="item"><span>Margherita</span><span>20</span></div>
+                <div class="desc">Tomato sauce, mozzarella, basil</div>
+              
+                <div class="item"><span>Mark’s Meatball Pie</span><span>23</span></div>
+                <div class="desc">Tomato-vodka cream sauce, meatball, chives</div>
+              
+                <div class="item"><span>Mushroom Duxelle</span><span>22</span></div>
+                <div class="desc">Caramelized onion, porcini, peppers, goat cheese, fig balsamic</div>
+              </div>
+    
+              <div class="section">
+                <div class="section-title">Mains</div>
+              
+                <div class="item"><span>Strip Steak</span><span>48</span></div>
+                <div class="desc">Caesar potatoes, herb butter</div>
+              
+                <div class="item"><span>Chicken Parm</span><span>27</span></div>
+                <div class="desc">Tomato vodka cream sauce, broccolini</div>
+              
+                <div class="item"><span>Strip Steak (14 oz)</span><span>48</span></div>
+                <div class="desc">Caesar potatoes, herb butter</div>
+              
+                <div class="item"><span>White Lasagna</span><span>24</span></div>
+                <div class="desc">Zucchini, squash, garlic greens, leeks, ricotta, mozzarella, pistachio pesto</div>
+              
+                <div class="item"><span>The Chicken Parm</span><span>27</span></div>
+                <div class="desc">Breaded & seared, tomato vodka cream sauce, mozzarella, broccolini, basil, rosemary</div>
+              
+                <div class="item"><span>The Eggplant Parm</span><span>25</span></div>
+                <div class="desc">Fried, mozzarella, oregano</div>
+              
+                <div class="item"><span>Grilled Salmon</span><span>28</span></div>
+                <div class="desc">Cous cous, winter citrus, arugula, peppers, olive oil vinaigrette, sesame tahini labneh</div>
+              
+                <div class="item"><span>Pork Rib Chop (14 oz)</span><span>34</span></div>
+                <div class="desc">Risotto, caper & mushrooms, basil pesto, asparagus, prosciutto butter</div>
+              </div>
+  </div>
+  </div>
+
+
+  <!-- LOCATION -->
+  <div class="content" id="location-content">
+    <h2>Location</h2>
+    <p>📍102 W Lockwood Ave Webster Groves, MO 63119</p>
+    <p>Mon – Wed: 4-9pm
+        <br>
+        Thur - Sat: 4-10pm
+        <br>
+        Sun: 4-9pm</p>
+    <a href="https://www.google.com/maps/place/O%2BO+Pizza/@38.5929853,-90.3588316,19.1z/data=!4m6!3m5!1s0x87d8cbc1fb2fb031:0xf1d4280bb3c76ae0!8m2!3d38.5928512!4d-90.3591031!16s%2Fg%2F11kd9y5g0x?entry=ttu&g_ep=EgoyMDI2MDIwNC4wIKXMDSoASAFQAw%3D%3D" target="_blank">
+        <img src="map.png" class="image" style="width:100%; max-width:500px; border-radius:12px;">
+      </a>
+  </div>
+
+  <!-- ABOUT -->
+  <div class="content" id="about-content">
+    <h2>Contact Us</h2>
+    <p>
+       <b> O+O PIZZA</b>
+      
+       <br>📍102 W Lockwood Ave Webster Groves, MO 63119
+     <br> 📱 314-721-5422
+        <br> 📧info@oliveandoakstl.com
+        <br>
+        <img src="p2.png" class="image">
+    </p>
+  </div>
+
+</div>
+
+</body>
+</html>
