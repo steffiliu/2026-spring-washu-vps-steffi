@@ -1,128 +1,148 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Steffi's Class Website, Spring 2026 at WashU</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Steffi Liu — Class Website, Spring 2026</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+
+  <style>
+    /* Reset & base */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: "Inter", sans-serif;
+      background: #f8f5f0;
+      color: #2a2a2a;
+      line-height: 1.7;
+      padding: 60px 20px;
+    }
+
+    main {
+      max-width: 780px;
+      margin: auto;
+    }
+
+    /* Header */
+    header {
+      text-align: center;
+      margin-bottom: 80px;
+    }
+
+    header h1 {
+      font-family: "Playfair Display", serif;
+      font-size: 3.2rem;
+      font-weight: 700;
+      color: #1f1f1f;
+      letter-spacing: -0.02em;
+      margin-bottom: 12px;
+    }
+
+    header p {
+      font-size: 1.05rem;
+      color: #5e5e5e;
+      letter-spacing: 0.5px;
+    }
+
+    /* Sections */
+    section {
+      margin-bottom: 60px;
+    }
+
+    section h2 {
+      font-family: "Playfair Display", serif;
+      font-size: 1.6rem;
+      font-weight: 700;
+      margin-bottom: 24px;
+      color: #2c2c2c;
+      border-left: 3px solid #201d1c;
+      padding-left: 12px;
+      letter-spacing: 0.5px;
+    }
 
    
+    ul {
+      list-style: none;
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 16px;
+    }
 
-    <style>
-       
-        * {
-          box-sizing: border-box;
-          margin: 0;
-          padding: 0;
-        }
+    li {
+      background: #ffffff;
+      border-radius: 14px;
+      padding: 16px 20px;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.05);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
 
-     
-        body {
-          font-family: "Inter", sans-serif;
-          background: #faf7f2;
-          color: #2f2f2f;
-          line-height: 1.6;
-          padding: 60px;
-        }
+    li:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 28px rgba(0,0,0,0.08);
+    }
 
-     
-        body > * {
-          max-width: 720px;
-          margin-left: auto;
-          margin-right: auto;
-        }
+    a {
+      color: #5c2500;
+      font-weight: 500;
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
 
-     
-        h1 {
-          font-size: 2.8rem;
-          font-weight: 700;
-          margin-bottom: 12px;
-        }
+    a:hover {
+      color: #7c5a3a;
+      text-decoration: underline;
+    }
 
-      
-        h2 {
-          margin-top: 40px;
-          font-size: 1.5rem;
-          border-bottom: 2px solid #e7cfc2;
-          padding-bottom: 6px;
-          letter-spacing: 1px;
-        }
-
-       
-        p {
-          font-size: 1.05rem;
-          opacity: 0.85;
-          margin-bottom: 20px;
-        }
-
-       
-        hr {
-          margin: 30px 0;
-          border: none;
-          height: 1px;
-          background: #ddd;
-        }
-
-      
-        ul {
-          list-style: none;
-          padding-left: 0;
-        }
-
-        li {
-          margin: 8px 0;
-        }
-
-       
-        a {
-          color: #c75b3a;
-          text-decoration: none;
-          font-weight: 500;
-          transition: all 0.2s ease;
-        }
-
-        a:hover {
-          color: #8f2f1a;
-          text-decoration: underline;
-        }
-
-     
-        h2 + ul {
-          background: white;
-          padding: 18px 22px;
-
-          border-radius: 14px;
-          box-shadow: 0 8px 25px rgba(0,0,0,0.05);
-        }
-    </style>
+    /* Footer */
+    footer {
+      text-align: center;
+      font-size: 0.9rem;
+      color: #8a8a8a;
+      margin-top: 80px;
+      letter-spacing: 0.5px;
+    }
+  </style>
 </head>
 <body>
+  <main>
+    <header>
+      <h1>Steffi Liu</h1>
+      <p>Class Website — Spring 2026 </p>
+    </header>
 
-    <h1>Steffi's Class Website</h1>
-    <p>Welcome to my class website!</p>
-
-    <hr>
-
-    <h2>Exercises</h2>
-    <ul>
+    <section>
+      <h2>Exercises</h2>
+      <ul>
         <li><a href="card-profile.html">Profile Card</a></li>
         <li>Collection of Things!!!</li>
-    </ul>
+      </ul>
+    </section>
 
-    <h2>Readings</h2>
-    <ul>
+    <section>
+      <h2>Readings</h2>
+      <ul>
         <li><a href="reading1.html">Restaurant Websites</a></li>
         <li><a href="reading2.html">The New Turing Test</a></li>
-        <li><a href="eno.html">Eno reading resonse</a></li>
-        <li>...</li>
-    </ul>
+        <li><a href="eno.html">Eno reading response</a></li>
+        <li>…</li>
+      </ul>
+    </section>
 
-    <h2>Projects</h2>
-    <ul>
+    <section>
+      <h2>Projects</h2>
+      <ul>
         <li><a href="p1/index.html">Restaurant Websites</a></li>
-        <li>Project 1. Restaurant or Café Variations</li>
-        <li>Project 2. Book → Website</li>
-        <li>Project 3. Standby Mode</li>
-    </ul>
+        <li><a href="p2/index.html">Book → Website</a></li>
+        <li>Project 3 — Standby Mode</li>
+      </ul>
+    </section>
 
+    
+  </main>
 </body>
 </html>
