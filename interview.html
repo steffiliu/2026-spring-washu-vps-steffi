@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI in Medicine Interviews</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+<style>
+
+/* ==================== GENERAL ==================== */
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  background: linear-gradient(135deg, #ffd6e0, #c9e7ff, #e5d4ff);
+  background-size: 400% 400%;
+  animation: gradientMove 10s ease infinite;
+  color: #111;
+}
+
+
+@keyframes gradientMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+header {
+  text-align: center;
+  padding: 80px 20px;
+}
+
+h1 {
+  font-size: 3rem;
+  font-family: 'Poppins', sans-serif;
+}
+
+.subtitle {
+  color: #ffffff;
+  margin-top: 10px;
+}
+
+.container {
+  max-width: 900px;
+  margin: auto;
+  padding: 20px;
+}
+
+/* ==================== BUTTON ==================== */
+.controls {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+button {
+  background: #111;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 25px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+button:hover {
+  background: #444;
+  transform: scale(1.05);
+}
+
+/* ==================== CARDS ==================== */
+.card {
+  background: rgba(255,255,255,0.85);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  padding: 30px;
+  margin-bottom: 40px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-6px) scale(1.01);
+}
+
+.title {
+  font-size: 1.6rem;
+  font-weight: 600;
+}
+
+.meta {
+  color: #777;
+  font-size: 0.9rem;
+  margin-bottom: 20px;
+}
+.hero-image {
+  position: relative;
+  width: 100%;
+  height: 350px;
+  background: url('aimed.png') center center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+ 
+  box-shadow: inset 0 0 0 1000px rgba(255,255,255,0.2);
+}
+.hero-image {
+  background-size: cover; /* ensures image fills section */
+  background-position: center;
+}
+/* ==================== Q & A ==================== */
+.qa {
+  margin-bottom: 15px;
+}
+
+.question {
+  font-weight: 600;
+  cursor: pointer;
+  padding: 12px;
+  border-radius: 12px;
+  transition: 0.2s;
+}
+
+/* ==================== DOCTOR COLORS (BLUE) ==================== */
+.doctor .question {
+  background: linear-gradient(135deg, #dbeafe, #bfdbfe);
+}
+
+.doctor .question:hover {
+  background: linear-gradient(135deg, #bfdbfe, #93c5fd);
+}
+
+.doctor .answer {
+  border-left: 4px solid #3b82f6;
+  padding-left: 12px;
+  margin-top: 10px;
+  background: rgba(219, 234, 254, 0.3);
+  border-radius: 8px;
+}
+
+/* ==================== STUDENT COLORS (GREEN) ==================== */
+.student .question {
+  background: linear-gradient(135deg, #b3ffcd, #95ffd6);
+}
+
+.student .question:hover {
+  background: linear-gradient(135deg, #a2dfb7, #88e3b7);
+}
+
+.student .answer {
+  border-left: 4px solid #62b982;
+  padding-left: 12px;
+  margin-top: 10px;
+  background: rgba(220, 252, 231, 0.3);
+  border-radius: 8px;
+}
+
+/* ANSWER TOGGLE */
+.answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease;
+  padding: 0 10px;
+}
+
+.answer.open {
+  max-height: 300px;
+}
+
+/* ==================== TAGS ==================== */
+.tag {
+  display: inline-block;
+  background: linear-gradient(135deg, #111, #444);
+  color: white;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  margin-bottom: 10px;
+}
+
+/* ==================== TAKEAWAYS ==================== */
+.takeaways {
+  background: rgba(255,255,255,0.9);
+  border-radius: 20px;
+  padding: 30px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.takeaways h2 {
+  font-family: 'Poppins', sans-serif;
+}
+
+.takeaways ul {
+  line-height: 1.8;
+}
+
+/* ==================== FOOTER ==================== */
+footer {
+  text-align: center;
+  padding: 40px;
+  color: #555;
+}
+
+</style>
+</head>
+
+<body>
+
+    <header>
+        <div class="hero-image">
+          <div class="hero-text">
+            <h1>AI in Medicine</h1>
+            <div class="subtitle">Visual Principles of the Screen Interview</div>
+          </div>
+        </div>
+      </header>
+      
+      <div class="container">
+      
+      <div class="controls">
+        <button onclick="toggleAll()">Open / Close All Questions</button>
+      </div>
+
+<div class="container">
+
+  <!-- INTERVIEW CARD -->
+  <div class="card doctor">
+    <div class="tag">Doctor Perspective</div>
+    <div class="title">Interview with Lide Liu</div>
+    <div class="meta">Physician </div>
+
+    <div class="qa">
+      <div class="question">Q: How has AI actually shown up in your day-to-day work?
+    </div>
+      <div class="answer">A: Honestly, more than I expected. It’s not like robots are diagnosing patients or anything, but AI is starting to become more and more common. While it hasnt happened at my office, I have heard that at some larger hospitals and offices, ai has began to be intergrated in electronic health records to suggest diagnoses, flag abnormal lab results, and even help draft patient notes.
+    </div>
+    </div>
+
+    <div class="qa">
+      <div class="question">Q: Would you trust an AI diagnosis? </div>
+      <div class="answer">A: In general, I view AI as a support tool, not a decision-maker. They’re helpful for catching things I might miss, especially with large amounts of data, but I will always double-check. Medicine still relies heavily on human judgment.
+    </div>
+    </div>
+    <div class="qa">
+        <div class="question">Q: Has it made your job easier?
+        </div>
+        <div class="answer">A: Definitely. I find AI most helpful for when I am writing patient charts and documentation in general. AI helps me with wording espeically when I cant think of the correct word. With English being my seccond language, ChatGPT really helps my writing be clearer and faster. This has made my job a lot easier as my least favorite and most time consuming task is writing the post examination paperwork.</div>
+      </div>
+      <div class="qa">
+        <div class="question">Q: What about patient interaction? Has AI changed that?
+        </div>
+        <div class="answer">A: I think it is less AI and more technology in general. Espicially since COVID, we have more and more virtual appointments with patients. While these digital meetings can definitly make the lives easier for patients, they are not my favorite. I find having human to human interaction extremely important, espicaily in medicine. </div>
+      </div>
+      <div class="qa">
+        <div class="question">Q: Are there any concerns you have about AI in medicine?
+        </div>
+        <div class="answer">A: 100%. I think as AI becomes more popular, it risks over reliance. Like I said before, I think AI must be used as a tool and not something to do all the thinking. AI can make mistakes and in a field like medicine, preventable mistakes really cant happen. Another thing is bias. AI systems are only as good as the data they’re trained on. If the data isn’t diverse, the outcomes can be skewed and biased. Privacy is another concern, especially with sensitive patient information.
+ </div>
+      </div>
+      <div class="qa">
+        <div class="question">Q: Outside of work, how much do you use AI?</div>
+        <div class="answer">A: I love AI. I pay for ChatGPT premium every month and I use it daily. I love using it to plan vacations, answer questions, and give me recepies. I honestly think it is one of my most used web</div>
+      </div>
+      <div class="qa">
+        <div class="question">Q: Do you think AI can or will replace doctors?</div>
+        <div class="answer">A: No. It will change how we work, but not replace us. Medicine is too complex and human-centered. AI can assist, but it can’t replicate empathy and ethical decision-making.
+        </div>
+      </div>
+      
+  </div>
+
+  <!-- SECOND INTERVIEW -->
+  <div class="card student">
+    <div class="tag">Student Perspective</div>
+    <div class="title">Interview with Irene</div>
+    <div class="meta">WashU Pre-Med Student</div>
+
+    <div class="qa">
+      <div class="question">Q: As someone planning to go into medicine, how do you see AI affecting your future career?</div>
+      <div class="answer">A: It is kind  of hard to imagine. Espicially right now, we are so focused on learning chemistry and physics its hard to think about how AI can change medecine. I definitly do think there will be a big shift though. I think its impossible to avoid AI. Everthing is getting intergrated with AI so its pretty unavoidable. I do think it cool to be growing up with AI rather than having to learn it later on in life. I think that can give us an advatage.  </div>
+    </div>
+
+    <div class="qa">
+      <div class="question">Q: Do you feel prepared for that?
+    </div>
+      <div class="answer">A: Like I said, I think it is for sure benificial growing up with AI like ChatGPT and Gemeni. I think everyone our age knows how to use them. But in terms of AI in medicine, I am not as confident. I don’t think premed education really covers AI in depth yet. We learn science and theory, but not necessarily how to work alongside advanced technology.</div>
+    </div>
+
+    <div class="qa">
+        <div class="question">Q:Do you use AI for school?
+      </div>
+        <div class="answer">A: Yes. I use it a lot when studying. I have it give me summaries of readings and notes, give me practice problems, and explain concepts that I am struggling with. I honestly don't know what I would do without AI.</div>
+      </div>
+      <div class="qa">
+        <div class="question">Q: Do you ever worry about becoming too dependent on it?
+      </div>
+        <div class="answer">A: A little. It’s easy to rely on it when I am struggling or confused. Espicially with hard classes, I think it becomes a habit to use ChatGPT for help with problems instead of struggling through them for hours. I definitly see some people becoming more dependent on AI. Ive seen some people not be able to write a simple paragraph or response without ChatGPT and I think that is a little extreme and cocerning. </div>
+      </div>
+      <div class="qa">
+        <div class="question">Q: How do you think AI will impact patient care?
+
+      </div>
+        <div class="answer">A: Ideally, it’ll make it more efficient and accurate. Like faster diagnoses or personalized treatment plans. But I also think there’s a risk of medicine becoming less personal if doctors rely too heavily on technology.
+        </div>
+      </div>
+      <div class="qa">
+        <div class="question">Q:Do you think AI could replace certain roles in healthcare and does that impact the medicial field you want to go into?
+      </div>
+        <div class="answer">A: I don’t think AI will fully replace jobs in healthcare, but it will definitely change them. It can take over more repetitive tasks like analyzing data or helping with diagnoses, which might reduce some technical roles, but it also lets doctors focus more on patients and important decisions. For the field I want to go into, I see AI as a helpful tool, not a threat, because it can’t replace things like empathy and communication.</div>
+      </div>
+
+  </div>
+
+</div>
+<div class="takeaways">
+    <h2> Key Takeaways</h2>
+    <ul>
+      <li>AI is already being used in healthcare, especially for documentation, diagnostics, and data analysis.</li>
+      <li>Both professionals and students see AI as a tool and not a replacement for doctors.</li>
+      <li>There are real concerns about over-reliance, bias, and patient privacy.</li>
+      <li>The human side of medicine (empathy, trust, and communication) remains essential.</li>
+      <li>Future healthcare workers will need to understand both medicine and technology.</li>
+    </ul>
+  </div>
+  
+  </div>
+  
+
+  <script>
+
+    const questions = document.querySelectorAll('.question');
+    
+    questions.forEach(q => {
+      q.addEventListener('click', () => {
+        const answer = q.nextElementSibling;
+        answer.classList.toggle('open');
+      });
+    });
+    
+    let openAll = false;
+    
+    function toggleAll() {
+      const answers = document.querySelectorAll('.answer');
+      openAll = !openAll;
+    
+      answers.forEach(a => {
+        if(openAll) {
+          a.classList.add('open');
+        } else {
+          a.classList.remove('open');
+        }
+      });
+    }
+    
+    </script>
+
+</body>
+</html>
