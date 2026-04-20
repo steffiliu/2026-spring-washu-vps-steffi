@@ -8,7 +8,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
 
   <style>
-    /* Reset & base */
+  
     * {
       margin: 0;
       padding: 0;
@@ -28,7 +28,7 @@
       margin: auto;
     }
 
-    /* Header */
+    
     header {
       text-align: center;
       margin-bottom: 80px;
@@ -49,7 +49,7 @@
       letter-spacing: 0.5px;
     }
 
-    /* Sections */
+   
     section {
       margin-bottom: 60px;
     }
@@ -108,6 +108,7 @@
     }
   </style>
 </head>
+
 <body>
   <main>
     <header>
@@ -129,6 +130,8 @@
         <li><a href="reading1.html">Restaurant Websites</a></li>
         <li><a href="reading2.html">The New Turing Test</a></li>
         <li><a href="eno.html">Eno reading response</a></li>
+        li><a href="reading3.html">reading response 6</a></li>
+        li><a href="readingethics.html">reading response 7</a></li>
         <li>…</li>
       </ul>
     </section>
@@ -146,12 +149,31 @@
       <h2>Writing Exercise </h2>
       <ul>
         <li><a href="writingresponse1.html">Exercise 1</a></li>
-        li><a href="writingrespons2.html">Exercise 2</a></li>
-     
+        <li><a href="writingrespons2.html">Exercise 2</a></li>
+        <li><a href="writingrespons3.html">Exercise 3</a></li>
+        <li><a href="writingrespons4.html">Exercise 4</a></li>
       </ul>
     </section>
 
     
   </main>
+  <script>
+  
+    const colors = [
+      "#f8f5f0", 
+      "#EBE4F2",
+      "FFDEEE",
+      "#C9B6A7",
+      "#E5F2DF",
+      "#E4F2F2",
+      "#DFF1F2",
+      "#ede7e3",
+      "#FFF0F2"
+    ];
+  
+    const randomColor = colors[Math.floor(Math.random() * colors.length)];
+    document.body.style.background = randomColor;
+    
+  </script>
 </body>
 </html>
