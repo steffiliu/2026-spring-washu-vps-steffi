@@ -87,25 +87,66 @@
     }
 
     a {
-      color: #5c2500;
+      color: #6e091f;
       font-weight: 500;
       text-decoration: none;
       transition: all 0.3s ease;
     }
 
     a:hover {
-      color: #7c5a3a;
+      color: #2f050c;
       text-decoration: underline;
     }
 
-    /* Footer */
-    footer {
-      text-align: center;
-      font-size: 0.9rem;
-      color: #8a8a8a;
-      margin-top: 80px;
-      letter-spacing: 0.5px;
-    }
+    .portfolio-btn {
+  display: inline-block;
+  margin-top: 24px;
+  padding: 12px 24px;
+  background: rgba(0, 0, 0, 0.12);
+  color: #2a2a2a;
+  border-radius: 999px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  text-decoration: none;
+  backdrop-filter: blur(4px);
+  transition: all 0.3s ease;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+}
+
+.portfolio-btn:hover {
+  background: rgba(0, 0, 0, 0.2);
+  transform: translateY(-2px);
+  text-decoration: none;
+}
+
+.favorites-box {
+  background: rgba(255, 255, 255, 0.55);
+  border-radius: 20px;
+  padding: 28px;
+  margin-top: 30px;
+  backdrop-filter: blur(6px);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.05);
+}
+
+.favorites-box h2 {
+  margin-bottom: 18px;
+}
+
+.favorites-list {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.favorite-item {
+  font-size: 1rem;
+  color: #3a3a3a;
+}
+
+.favorite-label {
+  font-weight: 600;
+  color: #5c2500;
+}
   </style>
 </head>
 
@@ -114,6 +155,9 @@
     <header>
       <h1>Steffi Liu</h1>
       <p>Class Website — Spring 2026 </p>
+      <a href="https://heyzine.com/flip-book/8571069eeb.html" class="portfolio-btn">
+        Visit My Architecture Portfolio
+      </a>
     </header>
 
     <section>
@@ -127,12 +171,14 @@
     <section>
       <h2>Readings</h2>
       <ul>
-        <li><a href="reading1.html">Restaurant Websites</a></li>
-        <li><a href="reading2.html">The New Turing Test</a></li>
-        <li><a href="eno.html">Eno reading response</a></li>
-        li><a href="reading3.html">reading response 6</a></li>
-        li><a href="readingethics.html">reading response 7</a></li>
-        <li>…</li>
+        <li><a href="reading1.html">Reading: Restaurant Websites</a></li>
+        <li><a href="reading2.html">Reading: The New Turing Test</a></li>
+        <li><a href="readingwebsite.html">Reading: Shifting Websites</a></li>
+        <li><a href="readingcyborgs.html">Reading: Cyborgs VS Rooms</a></li>
+        <li><a href="eno.html">Reading: Eno</a></li>
+        <li><a href="reading3.html">Reading: Calm Technology</a></li>
+        <li><a href="readingethics.html">Reading: Ethics</a></li>
+        
       </ul>
     </section>
 
@@ -142,7 +188,8 @@
         <li><a href="interview.html">Interview</a></li>
         <li><a href="p1/index.html">Restaurant Websites</a></li>
         <li><a href="p2/index.html">Book → Website</a></li>
-        <li>Project 3 — Standby Mode</li>
+        
+        <li><a href="stanby.html">Stand By Mode</a></li>
       </ul>
     </section>
     <section>
@@ -153,6 +200,26 @@
         <li><a href="writingrespons3.html">Exercise 3</a></li>
         <li><a href="writingrespons4.html">Exercise 4</a></li>
       </ul>
+    </section>
+    <section class="favorites-box">
+      <h2>Current Favorites</h2>
+    
+      <div class="favorites-list">
+        <div class="favorite-item">
+          <span class="favorite-label">Song:</span>
+          Deny Deny Deny by Noah Kahan
+        </div>
+    
+        <div class="favorite-item">
+          <span class="favorite-label">Restaurant:</span>
+          Katies
+        </div>
+    
+        <div class="favorite-item">
+          <span class="favorite-label">Hobby:</span>
+          Watching Hockey
+        </div>
+      </div>
     </section>
 
     
